@@ -908,7 +908,7 @@
   max-width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Clash Display;
+  font-family: Clashdisplay, Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 100%;
@@ -1357,7 +1357,7 @@
 }
 
 .cardbg.cardbg3 {
-  background-image: url('../images/schedule-1.png');
+  background-image: url('../images/Screenshot-2025-09-19-at-25745-AM-1.png');
   background-position: 0 0;
   background-size: cover;
   flex: none;
@@ -1373,7 +1373,7 @@
 
 .cardbg.cardbg1 {
   background-color: #000;
-  background-image: url('../images/schedule-1_1.png');
+  background-image: url('../images/schedule-1.png');
   background-position: 0 0;
   background-size: cover;
 }
@@ -1401,10 +1401,6 @@
   align-items: center;
   font-weight: 200;
   display: flex;
-}
-
-.bodytext.sessionlefttext.bodytextshort.invisiblecharacter {
-  display: none;
 }
 
 .bodytext.bodytextshort {
@@ -1651,7 +1647,7 @@
 
 .banner {
   grid-row-gap: 10px;
-  background-image: url('../images/Banner.jpg');
+  background-image: url('../images/banner.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2425,7 +2421,7 @@
   grid-row-gap: 15px;
   flex: 0 auto;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   margin-bottom: 0;
   display: flex;
@@ -2609,13 +2605,6 @@
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   margin-top: 30px;
-  display: flex;
-}
-
-.sessionleftblock {
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   display: flex;
 }
 
@@ -2974,10 +2963,6 @@
     align-items: center;
     min-width: 110px;
     font-weight: 200;
-  }
-
-  .bodytext.sessionlefttext.bodytextshort.invisiblecharacter {
-    display: block;
   }
 
   .navbarframe {
