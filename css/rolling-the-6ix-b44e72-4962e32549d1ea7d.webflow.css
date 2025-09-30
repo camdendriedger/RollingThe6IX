@@ -1366,7 +1366,7 @@
 }
 
 .cardbg.cardbg3 {
-  background-image: url('../images/schedule-1.png');
+  background-image: url('../images/submitmediabg.jpg');
   background-position: 0 0;
   background-size: cover;
   flex: none;
@@ -1388,7 +1388,7 @@
 }
 
 .cardbg.cardbg4 {
-  background-image: url('../images/Toronto.png');
+  background-image: url('../images/toronto.png');
   background-position: 0 0;
   background-size: cover;
 }
@@ -2708,7 +2708,7 @@
 .submitcontainer {
   -webkit-text-fill-color: inherit;
   object-fit: cover;
-  background-image: url('../images/submitmediaBG.jpg');
+  background-image: url('../images/submitmediabg.jpg');
   background-position: 0 0;
   background-size: cover;
   background-clip: border-box;
