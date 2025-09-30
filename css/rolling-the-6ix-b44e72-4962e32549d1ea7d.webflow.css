@@ -246,6 +246,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
   text-decoration: none;
   display: flex;
   position: relative;
@@ -285,8 +286,9 @@
   justify-content: flex-end;
   align-items: center;
   width: auto;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
   text-decoration: none;
   display: flex;
 }
@@ -306,6 +308,7 @@
 }
 
 .soloinlinelogo-1 {
+  height: 100%;
   overflow: hidden;
 }
 
@@ -450,13 +453,17 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 30px;
   padding-bottom: 10px;
   text-decoration: none;
   display: flex;
   position: absolute;
   inset: auto auto 40px;
+}
+
+.scrollicon.w--current {
+  width: 65px;
 }
 
 .splashcontent-1 {
@@ -655,6 +662,7 @@
   flex: 0 auto;
   justify-content: flex-start;
   align-items: center;
+  width: 100px;
   text-decoration: none;
   display: flex;
 }
@@ -711,6 +719,7 @@
   flex: 0 auto;
   justify-content: flex-end;
   align-items: center;
+  width: 100px;
   text-decoration: none;
   display: flex;
 }
@@ -908,7 +917,7 @@
   max-width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Clashdisplay, Arial, sans-serif;
+  font-family: Clash Display;
   font-size: 24px;
   font-weight: 500;
   line-height: 100%;
@@ -1357,7 +1366,7 @@
 }
 
 .cardbg.cardbg3 {
-  background-image: url('../images/Screenshot-2025-09-19-at-25745-AM-1.png');
+  background-image: url('../images/schedule-1.png');
   background-position: 0 0;
   background-size: cover;
   flex: none;
@@ -1373,7 +1382,7 @@
 
 .cardbg.cardbg1 {
   background-color: #000;
-  background-image: url('../images/schedule-1.png');
+  background-image: url('../images/schedule-1_1.png');
   background-position: 0 0;
   background-size: cover;
 }
@@ -1401,6 +1410,10 @@
   align-items: center;
   font-weight: 200;
   display: flex;
+}
+
+.bodytext.sessionlefttext.bodytextshort.invisiblecharacter {
+  display: none;
 }
 
 .bodytext.bodytextshort {
@@ -1499,7 +1512,13 @@
 }
 
 .link-block-3 {
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
   height: 100%;
+  display: flex;
 }
 
 .section-2 {
@@ -1592,6 +1611,36 @@
   background-color: #fff;
 }
 
+.smallbuttonlink.tall {
+  margin-top: 10px;
+}
+
+.smallbuttonlink.buttonscheduleyear {
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+.smallbuttonlink.submitmediabutton {
+  background-color: #232323f0;
+  background-image: none;
+  background-size: auto;
+  flex-flow: column;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.smallbuttonlink.submitmediabutton:hover {
+  background-color: #aeaeaef0;
+}
+
+.smallbuttonlink.buttonlinkmedium {
+  width: 300px;
+  margin-top: 10px;
+}
+
 .smallbuttontext {
   color: #fff;
   text-transform: uppercase;
@@ -1647,7 +1696,7 @@
 
 .banner {
   grid-row-gap: 10px;
-  background-image: url('../images/banner.jpg');
+  background-image: url('../images/Banner.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1806,6 +1855,10 @@
 
 .sessiontitle.sessiontitletall {
   margin-top: 10px;
+}
+
+.sessiontitle.topmargin {
+  margin-top: 20px;
 }
 
 ._700pm---meetup-at-the-bentway-730pm---rollout-distance-20km-2hrs {
@@ -2367,13 +2420,17 @@
   color: #fff;
   letter-spacing: .03em;
   text-transform: uppercase;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Clash Display, sans-serif;
+  font-family: Clash Display;
   font-size: 24px;
   font-weight: 400;
   line-height: 120%;
   text-decoration: none;
+  overflow: visible;
 }
 
 .heading-3 {
@@ -2421,7 +2478,7 @@
   grid-row-gap: 15px;
   flex: 0 auto;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 0;
   display: flex;
@@ -2537,6 +2594,7 @@
 }
 
 .div-block-6 {
+  max-width: 100%;
   margin-left: 100px;
 }
 
@@ -2606,6 +2664,88 @@
   grid-row-gap: 10px;
   margin-top: 30px;
   display: flex;
+}
+
+.sessionleftblock {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.scheduleyear {
+  color: #fff;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  word-break: keep-all;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Clash Display;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  text-decoration: none;
+}
+
+.code-embed {
+  width: 100%;
+}
+
+.photogallery {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 100px;
+  display: flex;
+}
+
+.submitcontainer {
+  -webkit-text-fill-color: inherit;
+  object-fit: cover;
+  background-image: url('../images/submitmediaBG.jpg');
+  background-position: 0 0;
+  background-size: cover;
+  background-clip: border-box;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 300px;
+  height: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  overflow: hidden;
+}
+
+.image-14 {
+  filter: invert();
+  height: 70px;
+}
+
+.body-3 {
+  background-color: #181818;
+}
+
+.photogallerycollection {
+  width: 100%;
+  height: 100%;
+}
+
+.galleryimage {
+  object-fit: cover;
+  flex: 1;
+  width: auto;
+  height: 300px;
+}
+
+.gallerytitle {
+  padding-left: 100px;
 }
 
 @media screen and (max-width: 991px) {
@@ -2782,6 +2922,13 @@
     padding-bottom: 15px;
   }
 
+  .day.skillshareintro.bottommargin {
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .daybody.skill {
     flex-flow: column;
   }
@@ -2800,6 +2947,10 @@
 
   .skillleft {
     width: 100%;
+  }
+
+  .div-block-6 {
+    margin-left: 100px;
   }
 
   .skillimagesx2 {
@@ -2827,6 +2978,11 @@
 
   .pplinkbox {
     font-family: Switzer Variable, Arial, sans-serif;
+  }
+
+  .soloinlinelogo-1 {
+    width: auto;
+    height: auto;
   }
 
   .navbar {
@@ -2965,6 +3121,10 @@
     font-weight: 200;
   }
 
+  .bodytext.sessionlefttext.bodytextshort.invisiblecharacter {
+    display: block;
+  }
+
   .navbarframe {
     height: 100%;
   }
@@ -2991,6 +3151,15 @@
 
   .smallbuttonlink {
     margin-top: 0;
+  }
+
+  .smallbuttonlink.submitmediabutton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .smallbuttonlink.buttonfull {
+    width: 100%;
   }
 
   .navmobile {
@@ -3086,7 +3255,12 @@
   }
 
   .thursday-2 {
+    white-space: normal;
     word-break: keep-all;
+  }
+
+  .thursday-2.textnowrap {
+    white-space: nowrap;
   }
 
   .sessionrow {
@@ -3148,6 +3322,22 @@
   .div-block-10 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+  }
+
+  .scheduleyear {
+    word-break: keep-all;
+  }
+
+  .photogallery {
+    padding: 0;
+  }
+
+  .submitcontainer {
+    width: 100%;
+  }
+
+  .gallerytitle {
+    padding-left: 0;
   }
 }
 
