@@ -1622,8 +1622,6 @@
 
 .smallbuttonlink.submitmediabutton {
   background-color: #232323f0;
-  background-image: none;
-  background-size: auto;
   flex-flow: column;
   width: 100%;
   max-width: 300px;
