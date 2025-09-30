@@ -1382,7 +1382,7 @@
 
 .cardbg.cardbg1 {
   background-color: #000;
-  background-image: url('../images/schedule-1_1.png');
+  background-image: url('../images/schedule-1.png');
   background-position: 0 0;
   background-size: cover;
 }
@@ -1696,7 +1696,7 @@
 
 .banner {
   grid-row-gap: 10px;
-  background-image: url('../images/Banner.jpg');
+  background-image: url('../images/banner.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
