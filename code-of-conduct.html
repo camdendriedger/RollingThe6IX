@@ -1,10 +1,10 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Sep 30 2025 07:02:17 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Fri Sep 18 2026 11:06:08 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="68d4eea4ca932b6631bd4c55" data-wf-site="68d4eea4ca932b6631bd4c5a" lang="en">
 <head>
   <meta charset="utf-8">
   <title>Code of Conduct</title>
   <meta content="Code of Conduct" property="og:title">
-  <meta content="Code of Conduct" property="twitter:title">
+  <meta content="Code of Conduct" name="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -14,6 +14,7 @@
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
   <style>
+/* Remove focus outlines and unwanted link decoration */
 a:focus, a:active, a:focus-visible, a:focus-within,
 .w-inline-block:focus, .w-inline-block:focus-visible,
 .w-button:focus, .w-button:focus-visible {
@@ -22,35 +23,30 @@ a:focus, a:active, a:focus-visible, a:focus-within,
   text-decoration: none !important;
   transition: box-shadow 0.2s;
 }
-/* Some browsers use a different pseudo for accessibility */
-a:focus-visible, .w-inline-block:focus-visible, .w-button:focus-visible {
-  outline: none !important;
-  box-shadow: 0 0 0 2px #181818 !important;
-  text-decoration: none !important;
-}
-/* Remove underline for all links, just in case */
+/* Remove underline from links by default */
 a, a:focus, a:active, a:visited, a:hover {
   text-decoration: none !important;
 }
+/* Anything with the Webflow class "underline" gets an underline */
+.underline,
+.underline:focus,
+.underline:active,
+.underline:visited,
+.underline:hover {
+  text-decoration: underline !important;
+}
+/* Keep underlined links white instead of browser blue/purple */
+a.underline,
+a.underline:visited,
+a.underline:hover,
+a.underline:active,
+a.underline:focus,
+a:has(.underline),
+a:has(.underline):visited,
+a:has(.underline):hover {
+  color: #fff !important;
+}
 </style>
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-  var modal = document.getElementById("PolicyModal");
-  var readBtn = document.getElementById("ReadPolicyBtn");
-  // Only show if NOT previously dismissed
-  if (!localStorage.getItem("policyRead")) {
-    if (modal) modal.style.display = "flex"; // Or "block", match your setup
-  } else {
-    if (modal) modal.style.display = "none";
-  }
-  if (readBtn) {
-    readBtn.addEventListener("click", function() {
-      localStorage.setItem("policyRead", "true");
-      if (modal) modal.style.display = "none";
-    });
-  }
-});
-</script>
 </head>
 <body>
   <div data-figma-id="308:221" class="mobilenavbar">
@@ -106,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <p data-figma-id="153:492" class="heading2 headingmobile">participation policy</p>
       <div data-figma-id="153:493" class="right-icon"><img class="skateicon-quad" src="images/skateicon-quad.png" data-figma-image-id="68d2462b4d554e82537ea391" alt="" data-figma-id="153:494" data-figma-image-hash="c56806e202fc5a9130d176f6b9d0c2b2" loading="lazy"></div>
     </div>
-    <div data-figma-id="153:491" class="introtext"></div><img src="images/dsc7648-min.jpg" loading="lazy" sizes="(max-width: 2500px) 100vw, 2500px" srcset="images/dsc7648-min-p-500.jpg 500w, images/dsc7648-min-p-800.jpg 800w, images/dsc7648-min-p-1080.jpg 1080w, images/dsc7648-min-p-1600.jpg 1600w, images/dsc7648-min.jpg 2500w" alt="" class="image-9">
+    <div data-figma-id="153:491" class="introtext"></div><img src="images/dsc7648-min.jpg" loading="lazy" sizes="100vw" srcset="images/dsc7648-min-p-500.jpg 500w, images/dsc7648-min-p-800.jpg 800w, images/dsc7648-min-p-1080.jpg 1080w, images/dsc7648-min-p-1600.jpg 1600w, images/dsc7648-min.jpg 2500w" alt="" class="image-9">
     <div class="div-block-3"></div>
   </section>
   <div data-figma-id="153:479" class="div2"></div>
