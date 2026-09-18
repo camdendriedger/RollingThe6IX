@@ -1,10 +1,10 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Sep 30 2025 07:40:51 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Fri Sep 18 2026 11:25:21 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="68d4eea4ca932b6631bd4c58" data-wf-site="68d4eea4ca932b6631bd4c5a" lang="en">
 <head>
   <meta charset="utf-8">
   <title>Gallery</title>
   <meta content="Gallery" property="og:title">
-  <meta content="Gallery" property="twitter:title">
+  <meta content="Gallery" name="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -14,6 +14,7 @@
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
   <style>
+/* Remove focus outlines and unwanted link decoration */
 a:focus, a:active, a:focus-visible, a:focus-within,
 .w-inline-block:focus, .w-inline-block:focus-visible,
 .w-button:focus, .w-button:focus-visible {
@@ -22,35 +23,30 @@ a:focus, a:active, a:focus-visible, a:focus-within,
   text-decoration: none !important;
   transition: box-shadow 0.2s;
 }
-/* Some browsers use a different pseudo for accessibility */
-a:focus-visible, .w-inline-block:focus-visible, .w-button:focus-visible {
-  outline: none !important;
-  box-shadow: 0 0 0 2px #181818 !important;
-  text-decoration: none !important;
-}
-/* Remove underline for all links, just in case */
+/* Remove underline from links by default */
 a, a:focus, a:active, a:visited, a:hover {
   text-decoration: none !important;
 }
+/* Anything with the Webflow class "underline" gets an underline */
+.underline,
+.underline:focus,
+.underline:active,
+.underline:visited,
+.underline:hover {
+  text-decoration: underline !important;
+}
+/* Keep underlined links white instead of browser blue/purple */
+a.underline,
+a.underline:visited,
+a.underline:hover,
+a.underline:active,
+a.underline:focus,
+a:has(.underline),
+a:has(.underline):visited,
+a:has(.underline):hover {
+  color: #fff !important;
+}
 </style>
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-  var modal = document.getElementById("PolicyModal");
-  var readBtn = document.getElementById("ReadPolicyBtn");
-  // Only show if NOT previously dismissed
-  if (!localStorage.getItem("policyRead")) {
-    if (modal) modal.style.display = "flex"; // Or "block", match your setup
-  } else {
-    if (modal) modal.style.display = "none";
-  }
-  if (readBtn) {
-    readBtn.addEventListener("click", function() {
-      localStorage.setItem("policyRead", "true");
-      if (modal) modal.style.display = "none";
-    });
-  }
-});
-</script>
 </head>
 <body class="body-2">
   <div data-figma-id="308:221" class="mobilenavbar">
@@ -100,44 +96,134 @@ document.addEventListener("DOMContentLoaded", function() {
       <div data-figma-id="282:50" data-figma-image-id="68d31c336535322050c64e63" data-figma-image-hash="a1ecfe4394607f3ff50f1e59637ec42c" class="cardgradient-2"></div>
     </div>
   </section>
-  <section class="section-2">
+  <section class="section-2 smallbanner">
     <div data-figma-id="153:480" class="introrow titlemobile">
       <div data-figma-id="153:481" class="lefticon"><img class="skateicon-inline" src="images/skateicon-inline.svg" data-figma-image-id="68d2462bda061fb9b6428ad5" alt="" data-figma-id="153:482" data-figma-image-hash="3116d61cc2b5e0ccf9f65c471578e548" loading="lazy"></div>
       <p data-figma-id="153:492" class="heading2 headingmobile">Gallery</p>
       <div data-figma-id="153:493" class="right-icon"><img class="skateicon-quad" src="images/skateicon-quad.png" data-figma-image-id="68d2462b4d554e82537ea391" alt="" data-figma-id="153:494" data-figma-image-hash="c56806e202fc5a9130d176f6b9d0c2b2" loading="lazy"></div>
     </div>
-    <div data-figma-id="153:491" class="introtext"></div><img src="images/dsc7593-web.jpg" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/dsc7593-web-p-500.jpg 500w, images/dsc7593-web-p-800.jpg 800w, images/dsc7593-web-p-1080.jpg 1080w, images/dsc7593-web-p-1600.jpg 1600w, images/dsc7593-web.jpg 1920w" alt="" class="image-12">
+    <div data-figma-id="153:491" class="introtext"></div><img src="images/_dsc9562.jpg" loading="lazy" sizes="(max-width: 2000px) 100vw, 2000px" srcset="images/_dsc9562-p-500.jpg 500w, images/_dsc9562-p-800.jpg 800w, images/_dsc9562-p-1080.jpg 1080w, images/_dsc9562-p-1600.jpg 1600w, images/_dsc9562.jpg 2000w" alt="" class="image-12">
     <div class="div-block-3"></div>
   </section>
-  <div data-figma-id="153:167" class="schedulecontent">
-    <div data-figma-id="153:174" class="div1-2"></div>
-    <div data-figma-id="153:177" class="day skillshareintro bottommargin">
-      <div data-figma-id="153:183" class="div-block-6">
-        <p data-figma-id="153:180" class="thursday-2">share your memories with us!</p>
-        <p data-figma-id="153:186" class="bodytext bodytexttall">Share you favourite photos or videos with the Rolling the 6ix community here:</p>
-        <div class="submitcontainer">
-          <a href="https://www.dropbox.com/request/CNzJoL4OdyhaCzUoutM6" target="_blank" class="smallbuttonlink submitmediabutton w-inline-block"><img src="images/cloud-upload.png" loading="lazy" alt="" class="image-14">
-            <p data-figma-id="153:186" class="smallbuttontext">SUBMIT MEDIA</p>
-          </a>
-        </div>
-        <p data-figma-id="153:186" class="subheading3">your media may be uploaded to the gallery or used in future promotional material.<br>Include your name in the file name to be credited.</p>
-        <div class="div-block-8"></div>
-      </div>
+  <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
+    <div class="tabs-menu w-tab-menu">
+      <a data-w-tab="Tab 1" class="tablink w-inline-block w-tab-link w--current">
+        <div class="tablinkitem">PHOTO</div>
+      </a>
+      <a data-w-tab="Tab 2" class="tablink w-inline-block w-tab-link">
+        <div class="tablinkitem">VIDEO</div>
+      </a>
+      <a data-w-tab="Tab 3" class="tablink w-inline-block w-tab-link">
+        <div class="tablinkitem">SOCIAL</div>
+      </a>
     </div>
-    <div data-figma-id="153:177" class="day skillshareintro bottommargin dayalternate">
-      <div class="photogallery">
-        <div class="code-embed w-embed w-script"><!--  Elfsight Instagram Feed | Untitled Instagram Feed  -->
-          <script src="https://elfsightcdn.com/platform.js" async=""></script>
-          <div class="elfsight-app-d09f8ac0-7f19-4f2d-9824-21eda447fefe" data-elfsight-app-lazy=""></div>
+    <div class="tabs-content w-tab-content">
+      <div data-w-tab="Tab 1" class="tabpane w-tab-pane w--tab-active">
+        <div class="w-layout-blockcontainer slidercontainer w-container">
+          <div data-delay="3000" data-animation="cross" class="slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="5" data-duration="1000" data-infinite="true">
+            <div class="w-slider-mask">
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc9599.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc9599-p-500.jpg 500w, images/_dsc9599-p-800.jpg 800w, images/_dsc9599-p-1080.jpg 1080w, images/_dsc9599-p-1600.jpg 1600w, images/_dsc9599.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc9720.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc9720-p-500.jpg 500w, images/_dsc9720-p-800.jpg 800w, images/_dsc9720-p-1080.jpg 1080w, images/_dsc9720-p-1600.jpg 1600w, images/_dsc9720.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc9748.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc9748-p-500.jpg 500w, images/_dsc9748-p-800.jpg 800w, images/_dsc9748-p-1080.jpg 1080w, images/_dsc9748-p-1600.jpg 1600w, images/_dsc9748.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc9644.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc9644-p-500.jpg 500w, images/_dsc9644-p-800.jpg 800w, images/_dsc9644-p-1080.jpg 1080w, images/_dsc9644-p-1600.jpg 1600w, images/_dsc9644.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc0058.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc0058-p-500.jpg 500w, images/_dsc0058-p-800.jpg 800w, images/_dsc0058-p-1080.jpg 1080w, images/_dsc0058-p-1600.jpg 1600w, images/_dsc0058.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc0027.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc0027-p-500.jpg 500w, images/_dsc0027-p-800.jpg 800w, images/_dsc0027-p-1080.jpg 1080w, images/_dsc0027-p-1600.jpg 1600w, images/_dsc0027.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc1435.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc1435-p-500.jpg 500w, images/_dsc1435-p-800.jpg 800w, images/_dsc1435-p-1080.jpg 1080w, images/_dsc1435-p-1600.jpg 1600w, images/_dsc1435.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc9726.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc9726-p-500.jpg 500w, images/_dsc9726-p-800.jpg 800w, images/_dsc9726-p-1080.jpg 1080w, images/_dsc9726-p-1600.jpg 1600w, images/_dsc9726.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc9953.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc9953-p-500.jpg 500w, images/_dsc9953-p-800.jpg 800w, images/_dsc9953-p-1080.jpg 1080w, images/_dsc9953-p-1600.jpg 1600w, images/_dsc9953.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc1183.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc1183-p-500.jpg 500w, images/_dsc1183-p-800.jpg 800w, images/_dsc1183-p-1080.jpg 1080w, images/_dsc1183-p-1600.jpg 1600w, images/_dsc1183.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc9757.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc9757-p-500.jpg 500w, images/_dsc9757-p-800.jpg 800w, images/_dsc9757-p-1080.jpg 1080w, images/_dsc9757-p-1600.jpg 1600w, images/_dsc9757.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+              <div class="slide w-slide">
+                <div class="w-layout-blockcontainer slideimagecontainer w-container"><img src="images/_dsc9746.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/_dsc9746-p-500.jpg 500w, images/_dsc9746-p-800.jpg 800w, images/_dsc9746-p-1080.jpg 1080w, images/_dsc9746-p-1600.jpg 1600w, images/_dsc9746.jpg 2000w" alt="" class="slideimage"></div>
+              </div>
+            </div>
+            <div class="w-slider-arrow-left">
+              <div class="w-icon-slider-left"></div>
+            </div>
+            <div class="w-slider-arrow-right">
+              <div class="w-icon-slider-right"></div>
+            </div>
+            <div class="w-slider-nav w-shadow w-round"></div>
+          </div>
         </div>
+        <section class="section-4">
+          <div class="w-layout-grid grid">
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/jb_dummy.jpg" loading="lazy" sizes="(max-width: 980px) 100vw, 980px" srcset="images/jb_dummy-p-500.jpg 500w, images/jb_dummy-p-800.jpg 800w, images/jb_dummy.jpg 980w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/jb_dummy.jpg" loading="lazy" sizes="(max-width: 980px) 100vw, 980px" srcset="images/jb_dummy-p-500.jpg 500w, images/jb_dummy-p-800.jpg 800w, images/jb_dummy.jpg 980w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage"></div>
+            <div class="imagecontainer"><img src="images/maxresdefault.jpg" loading="lazy" sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/maxresdefault-p-500.jpg 500w, images/maxresdefault-p-800.jpg 800w, images/maxresdefault-p-1080.jpg 1080w, images/maxresdefault.jpg 1280w" alt="" class="galleryimage">
+              <a href="#" class="lightbox w-inline-block w-lightbox">
+                <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "6916faeaeed70ddd6bdf0e11",
+      "origFileName": "jb_dummy.jpg",
+      "fileName": "jb_dummy.jpg",
+      "fileSize": 461122,
+      "height": 1401,
+      "url": "https://cdn.prod.website-files.com/68d4eea4ca932b6631bd4c5a/6916faeaeed70ddd6bdf0e11_jb_dummy.jpg",
+      "width": 980,
+      "type": "image"
+    }
+  ],
+  "group": ""
+}</script>
+              </a>
+            </div>
+            <div class="imagecontainer">
+              <a href="#" class="galleryimage w-inline-block w-lightbox">
+                <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "6916faeaeed70ddd6bdf0e11",
+      "origFileName": "jb_dummy.jpg",
+      "fileName": "jb_dummy.jpg",
+      "fileSize": 461122,
+      "height": 1401,
+      "url": "https://cdn.prod.website-files.com/68d4eea4ca932b6631bd4c5a/6916faeaeed70ddd6bdf0e11_jb_dummy.jpg",
+      "width": 980,
+      "type": "image"
+    }
+  ],
+  "group": ""
+}</script>
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-    <div data-figma-id="153:177" class="day skillshareintro bottommargin dayalternate">
-      <div class="gallerytitle">
-        <p data-figma-id="153:180" class="thursday-2">Gallery coming soon!</p>
-        <p data-figma-id="153:186" class="bodytext bodytexttall">Here are some photos to hold you over :)</p>
-      </div>
-      <div class="photogallery"><img src="images/gallery_img__0836.jpg" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="images/gallery_img__0836-p-500.jpg 500w, images/gallery_img__0836.jpg 800w" alt="" class="galleryimage"><img src="images/gallery_img__0692.jpg" loading="lazy" sizes="(max-width: 750px) 100vw, 750px" srcset="images/gallery_img__0692-p-500.jpg 500w, images/gallery_img__0692.jpg 750w" alt="" class="galleryimage"><img src="images/gallery_img__0821.jpg" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="images/gallery_img__0821-p-500.jpg 500w, images/gallery_img__0821.jpg 800w" alt="" class="galleryimage"><img src="images/gallery_img__0834.jpg" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="images/gallery_img__0834-p-500.jpg 500w, images/gallery_img__0834.jpg 800w" alt="" class="galleryimage"><img src="images/gallery_img__0802.jpg" loading="lazy" sizes="(max-width: 750px) 100vw, 750px" srcset="images/gallery_img__0802-p-500.jpg 500w, images/gallery_img__0802.jpg 750w" alt="" class="galleryimage"><img src="images/gallery_img__0769.jpg" loading="lazy" sizes="(max-width: 750px) 100vw, 750px" srcset="images/gallery_img__0769-p-500.jpg 500w, images/gallery_img__0769.jpg 750w" alt="" class="galleryimage"><img src="images/gallery_img__0811.jpg" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="images/gallery_img__0811-p-500.jpg 500w, images/gallery_img__0811.jpg 800w" alt="" class="galleryimage"></div>
+      <div data-w-tab="Tab 2" class="tabpane w-tab-pane"></div>
+      <div data-w-tab="Tab 3" class="tabpane w-tab-pane"></div>
     </div>
   </div>
   <div data-figma-id="294:95" class="footer">
