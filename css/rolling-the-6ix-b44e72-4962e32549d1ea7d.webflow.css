@@ -317,7 +317,8 @@
 }
 
 .soloinlinelogo-1 {
-  height: 100%;
+  width: 130px;
+  margin-left: -20px;
   overflow: hidden;
 }
 
@@ -327,7 +328,7 @@
 }
 
 .navbar {
-  z-index: 200;
+  z-index: 1000;
   background-color: #0000;
   justify-content: space-between;
   align-items: center;
@@ -344,6 +345,8 @@
 .navbar.navbar2 {
   background-color: #000;
   max-width: none;
+  position: sticky;
+  top: 0;
 }
 
 .navlogo {
@@ -784,10 +787,16 @@
 .subheading3.finetextshort {
   margin-top: -10px;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .subheading3.finetextshort.shortgap {
   margin-bottom: 5px;
+}
+
+.subheading3.finetextshort.exception {
+  margin-top: -5px;
+  margin-bottom: 0;
 }
 
 .div4 {
@@ -1392,20 +1401,20 @@
 }
 
 .cardbg.cardbg2 {
-  background-image: url('../images/skillshare.png');
-  background-position: 0 0;
+  background-image: url('../images/_dsc0195.jpg');
+  background-position: 50%;
   background-size: cover;
 }
 
 .cardbg.cardbg1 {
   background-color: #000;
-  background-image: url('../images/schedule-1.png');
+  background-image: url('../images/_DSC9723.jpg');
   background-position: 0 0;
   background-size: cover;
 }
 
 .cardbg.cardbg4 {
-  background-image: url('../images/torontobg.png');
+  background-image: url('../images/_DSC9726.jpg');
   background-position: 0 0;
   background-size: cover;
 }
@@ -1420,6 +1429,7 @@
 
 .bodytext.sessionrighttext {
   margin-bottom: 0;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -1439,9 +1449,21 @@
   color: #e31f26;
 }
 
+.bodytext.sessionrighttext.light {
+  font-weight: 200;
+}
+
+.bodytext.sessionrighttext.smallbody {
+  text-transform: uppercase;
+  margin-left: 3px;
+  font-size: 15px;
+  font-weight: 200;
+}
+
 .bodytext.sessionlefttext {
   justify-content: center;
   align-items: center;
+  font-size: 18px;
   font-weight: 200;
   display: flex;
 }
@@ -1450,12 +1472,48 @@
   display: none;
 }
 
+.bodytext.sessionlefttext.mobilehide {
+  margin-left: 6px;
+}
+
+.bodytext.sessionlefttext.mobileshow {
+  display: none;
+}
+
+.bodytext.sessionlefttext.smallbody {
+  font-size: 15px;
+}
+
+.bodytext.sessionlefttext.smallbody.nobottommargin {
+  margin-bottom: 0;
+}
+
+.bodytext.sessionlefttext.smallbody.nobottommargin.nobreak {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.bodytext.sessionlefttext.subheading2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 .bodytext.bodytextshort {
   margin-top: -10px;
 }
 
 .bodytext.bodytexttall {
   margin-top: 10px;
+}
+
+.bodytext.smallred {
+  color: #e31f26;
+  text-transform: uppercase;
+  white-space: normal;
+  word-break: keep-all;
+  min-width: 100px;
+  margin-bottom: 0;
+  font-size: 15px;
 }
 
 .subheading {
@@ -1549,7 +1607,7 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   flex-flow: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 100%;
   display: flex;
@@ -1563,6 +1621,7 @@
   height: 300px;
   padding-top: 70px;
   display: flex;
+  position: relative;
   overflow: hidden;
 }
 
@@ -1591,7 +1650,7 @@
   width: 100%;
   height: 300px;
   position: absolute;
-  inset: 0% 0% auto;
+  inset: auto 0% 0%;
 }
 
 .list {
@@ -1617,8 +1676,8 @@
   border: 1px solid #fff;
   justify-content: center;
   align-items: center;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 5px 10px;
   text-decoration: none;
   transition: background-color .1s;
@@ -1706,6 +1765,15 @@
 
 .smallbuttontext.red.plussymbol {
   margin-right: 3px;
+}
+
+.smallbuttontext.white.nobreak {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.smallbuttontext.medium {
+  font-size: 18px;
 }
 
 .navmobile {
@@ -1810,16 +1878,19 @@
   padding-bottom: 50px;
   text-decoration: none;
   display: flex;
+  position: relative;
   overflow: hidden;
 }
 
 .day.dayalternate {
   background-color: #000;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  margin-top: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
 }
 
-.day.dayalternate._2025 {
+.day.dayalternate._2025, .day.dayalternate.hidden {
   display: none;
 }
 
@@ -1827,7 +1898,23 @@
   height: 100%;
 }
 
+.day.skillshareintro.bottommargin {
+  padding-top: 35px;
+}
+
 .day.skillshareintro.bottommargin.hidden {
+  display: none;
+}
+
+.day.skillshareintro.bottommargin.notoppadding {
+  padding-top: 0;
+}
+
+.day.skillshareintro.bottommargin.notoppadding.medium {
+  font-size: 16px;
+}
+
+.day.skillshareintro.hidden {
   display: none;
 }
 
@@ -1918,10 +2005,10 @@
   letter-spacing: .03em;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   padding-left: 0;
   font-family: Switzer, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 600;
   line-height: 120%;
@@ -2504,14 +2591,23 @@
   white-space: nowrap;
   word-break: keep-all;
   overflow-wrap: normal;
+  justify-content: center;
+  align-items: center;
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: Clash Display;
   font-size: 24px;
   font-weight: 400;
   line-height: 120%;
   text-decoration: none;
+  display: flex;
   overflow: visible;
+}
+
+.thursday-2.nobreak {
+  font-family: Clashdisplay, Arial, sans-serif;
 }
 
 .heading-3 {
@@ -2566,11 +2662,26 @@
 }
 
 .sessionrow.sessionrowshort {
-  margin-bottom: -20px;
+  margin-bottom: 0;
+}
+
+.sessionrow.sessionrowshort.column {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  flex-flow: column;
 }
 
 .sessionrow.sessionvertical {
   flex-flow: column;
+}
+
+.sessionrow.mobilevertical.flowsplit {
+  flex-flow: wrap;
+  display: flex;
+}
+
+.sessionrow.class {
+  margin-top: -15px;
 }
 
 .sessiontitleheader {
@@ -2585,7 +2696,13 @@
   grid-row-gap: 5px;
   flex-flow: row;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+}
+
+.sessiontitleheader.sessiontitleheaderrow.vertical {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .sessiondifficultyrow {
@@ -2599,12 +2716,14 @@
 
 .stars {
   height: 15px;
-  padding-left: 46px;
+  margin-left: 0;
+  padding-left: 0;
   position: relative;
   top: 5px;
 }
 
 .image-12 {
+  margin-bottom: 200px;
   position: relative;
   top: 30px;
 }
@@ -2752,7 +2871,7 @@
   display: flex;
 }
 
-.sessionleftblock {
+.sessionleftblock, .sessionrightblock {
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -2911,6 +3030,7 @@
 
 .tabs-content {
   background-color: #181818;
+  height: 100%;
 }
 
 .slider {
@@ -2929,6 +3049,7 @@
 
 .section-4 {
   background-color: #0e0e0e;
+  display: none;
 }
 
 .gallery-bg {
@@ -3093,6 +3214,11 @@
   width: 150px;
 }
 
+.largebuttonlink.nobreak {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
 .horbuttoncontainer {
   grid-column-gap: 15px;
   grid-row-gap: 15px;
@@ -3100,10 +3226,30 @@
   display: flex;
 }
 
+.horbuttoncontainer.torontobuttoncontainer {
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
 .locationlink {
+  white-space: nowrap;
+  word-break: keep-all;
+  min-width: 200px;
+  margin: -5px;
+  padding: 5px;
   -webkit-text-decoration: underline #fff;
   text-decoration: underline #fff;
   display: flex;
+}
+
+.locationlink.lawrence.underline {
+  box-sizing: border-box;
+  aspect-ratio: auto;
+}
+
+.locationlink.alexandra.shortlink {
+  width: 100%;
+  margin-bottom: -8px;
 }
 
 .infoiconblock {
@@ -3126,7 +3272,7 @@
 }
 
 .locationmodal {
-  z-index: 100;
+  z-index: 500;
   background-color: #1a1a1a33;
   justify-content: center;
   align-items: center;
@@ -3147,7 +3293,7 @@
   display: none;
 }
 
-.locationmodal.alexandra, .locationmodal.ramsden, .locationmodal.christie {
+.locationmodal.college, .locationmodal.ramsden, .locationmodal.christie {
   background-color: #1a1a1ab3;
   display: none;
 }
@@ -3162,10 +3308,11 @@
   width: 100%;
   max-width: 800px;
   height: 100%;
-  max-height: 600px;
+  max-height: 75vh;
   padding: 50px;
   display: flex;
   position: relative;
+  box-shadow: 0 2px 20px -1px #ffffff14;
 }
 
 .locationtitle1 {
@@ -3299,8 +3446,8 @@
   background-image: url('../images/lawrence-location.jpg');
 }
 
-.locationimagecontainer.alexandra {
-  background-image: url('../images/alexandra-location.jpg');
+.locationimagecontainer.college {
+  background-image: url('../images/college.jpg');
 }
 
 .locationimagecontainer.ramsden {
@@ -3309,6 +3456,10 @@
 
 .locationimagecontainer.christie {
   background-image: url('../images/christie-location.jpg');
+}
+
+.locationimagecontainer.alexandra {
+  background-image: url('../images/alexandra-location.jpg');
 }
 
 .locationcontent {
@@ -3368,11 +3519,258 @@
 
 .div-block-15 {
   flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   display: flex;
 }
 
 ._2025 {
   display: none;
+}
+
+.image-17 {
+  width: 45px;
+}
+
+.div-block-16, .div-block-17 {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+.div-block-18 {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.bannershadow {
+  z-index: -10;
+  color: #1e1e1e;
+  background-color: #0e0e0eb3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.bannerimage {
+  z-index: -20;
+  position: relative;
+}
+
+.div-block-19 {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.div-block-20 {
+  z-index: 99;
+  background-color: #0e0e0e;
+  border: .5px #fff;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 30px 20px;
+  display: flex;
+  position: sticky;
+  top: 70px;
+}
+
+.div-block-21 {
+  height: 100vh;
+}
+
+.div-block-22 {
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  flex-flow: column;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.torontorow {
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  display: flex;
+}
+
+.details {
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  border: .5px solid #fff;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 100%;
+  margin-top: -15px;
+  padding: 20px;
+  display: none;
+}
+
+.details.bentwaydetails {
+  text-decoration: none;
+  display: none;
+}
+
+.details.bentwayy {
+  width: 100%;
+  min-width: 100%;
+  max-width: 300px;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.detailsrow {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.detailsrow.extramargin {
+  flex-flow: row;
+  margin-bottom: 5px;
+}
+
+.detailslist {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.detailsbutton {
+  border: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color .1s;
+  display: flex;
+}
+
+.detailsbutton:hover {
+  background-color: #fff;
+}
+
+.detailsbutton.ctalink {
+  max-width: none;
+}
+
+.detailsbutton.smallbuttonlinknarrow {
+  max-width: 150px;
+  margin-top: 10px;
+}
+
+.detailsbutton.nomargin {
+  margin-top: 20px;
+}
+
+.detailsbutton.buttonhighlight {
+  background-color: #e31f26;
+}
+
+.detailsbutton.buttonhighlight:hover {
+  background-color: #fff;
+}
+
+.detailsbutton.tall {
+  margin-top: 10px;
+}
+
+.detailsbutton.buttonscheduleyear {
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+.detailsbutton.submitmediabutton {
+  background-color: #232323f0;
+  flex-flow: column;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.detailsbutton.submitmediabutton:hover {
+  background-color: #aeaeaef0;
+}
+
+.detailsbutton.buttonlinkmedium {
+  width: 300px;
+  margin-top: 10px;
+}
+
+.detailsbutton.fixedwidthbutton {
+  width: 150px;
+}
+
+.detailsbutton._15pxtop {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.detailsclose {
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  margin-top: -20px;
+  margin-left: -20px;
+  position: absolute;
+}
+
+.div-block-23 {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.div-block-24 {
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.div-block-25 {
+  z-index: 300;
+  width: 100%;
+  height: 170px;
+  position: fixed;
+  inset: 0% 0% auto;
+}
+
+.section-5 {
+  margin-top: -170px;
+  position: absolute;
+  inset: 0% 0% auto;
+}
+
+.div-block-26, .div-block-27, .div-block-28, .div-block-29 {
+  width: 100%;
+}
+
+.section-6 {
+  height: 0;
+  position: absolute;
 }
 
 @media screen and (max-width: 991px) {
@@ -3440,6 +3838,10 @@
 
   .subheading2 {
     font-size: 16px;
+  }
+
+  .horbuttoncontainer.torontobuttoncontainer {
+    justify-content: center;
   }
 }
 
@@ -3560,6 +3962,10 @@
     flex-flow: column;
   }
 
+  .sessionrow.mobilevertical {
+    flex-flow: wrap;
+  }
+
   .stars {
     top: 3px;
   }
@@ -3600,11 +4006,16 @@
   .div-block-13 {
     flex-flow: column;
   }
+
+  .div-block-20 {
+    top: 50px;
+  }
 }
 
 @media screen and (max-width: 479px) {
   .footer {
     background-color: #000;
+    padding: 10px 30px;
   }
 
   .footer.footerfixed {
@@ -3615,9 +4026,14 @@
     font-family: Switzer Variable, Arial, sans-serif;
   }
 
+  .footerright {
+    grid-column-gap: 15px;
+  }
+
   .soloinlinelogo-1 {
-    width: auto;
+    width: 200px;
     height: auto;
+    margin-left: 0;
   }
 
   .navbar {
@@ -3750,10 +4166,13 @@
     display: inline-flex;
   }
 
+  .bodytext.sessionrighttext.underline {
+    display: flex;
+  }
+
   .bodytext.sessionlefttext {
     justify-content: flex-start;
     align-items: center;
-    min-width: 110px;
     font-weight: 200;
   }
 
@@ -3763,6 +4182,11 @@
 
   .bodytext.sessionlefttext.mobilehide {
     display: none;
+  }
+
+  .bodytext.sessionlefttext.mobileshow {
+    margin-bottom: 0;
+    display: flex;
   }
 
   .navbarframe {
@@ -3800,6 +4224,10 @@
 
   .smallbuttonlink.buttonfull {
     width: 100%;
+  }
+
+  .smallbuttontext.medium {
+    font-size: 14px;
   }
 
   .navmobile {
@@ -3890,6 +4318,10 @@
     flex-flow: column;
   }
 
+  .sessiontitle {
+    margin-bottom: 5px;
+  }
+
   .div1-2 {
     padding: 20px 30px;
   }
@@ -3899,13 +4331,18 @@
     word-break: keep-all;
   }
 
-  .thursday-2.textnowrap {
+  .thursday-2.textnowrap, .thursday-2.nobreak {
     white-space: nowrap;
   }
 
   .sessionrow, .sessionrow.sessionrowshort {
     justify-content: flex-start;
     align-items: flex-start;
+  }
+
+  .sessiontitleheader.sessiontitleheaderrow {
+    justify-content: center;
+    align-items: center;
   }
 
   .sessiondifficultyrow {
@@ -3916,11 +4353,12 @@
 
   .stars {
     max-width: none;
-    padding-left: 5px;
+    padding-left: 0;
     display: inline-flex;
   }
 
   .image-12 {
+    margin-bottom: 50px;
     top: 20px;
   }
 
@@ -3959,6 +4397,10 @@
     grid-row-gap: 0px;
   }
 
+  .sessionleftblock {
+    min-width: 100px;
+  }
+
   .scheduleyear {
     word-break: keep-all;
   }
@@ -3988,9 +4430,28 @@
     width: 100%;
   }
 
+  .largebuttonlink.nobreak.mobilenomargin {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
   .horbuttoncontainer {
     flex-flow: column;
     width: 100%;
+  }
+
+  .horbuttoncontainer.torontobuttoncontainer {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .locationlink {
+    word-break: keep-all;
+    min-width: 150px;
+  }
+
+  .image-15 {
+    width: 2em;
   }
 
   .warningdiv {
@@ -4001,6 +4462,10 @@
     padding-left: 20px;
     padding-right: 20px;
     display: none;
+  }
+
+  .locationframe {
+    padding: 35px 25px 25px;
   }
 
   .locationtitle1 {
@@ -4021,6 +4486,43 @@
   }
 
   .addressbutton.buttonfull {
+    width: 100%;
+  }
+
+  .exitframe {
+    margin-top: 35px;
+    margin-right: 25px;
+  }
+
+  .image-17 {
+    width: 75px;
+  }
+
+  .div-block-18 {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .div-block-20 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    top: 50px;
+  }
+
+  .torontorow {
+    flex-flow: wrap;
+  }
+
+  .detailsbutton {
+    margin-top: 0;
+  }
+
+  .detailsbutton.submitmediabutton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .detailsbutton.buttonfull {
     width: 100%;
   }
 }
